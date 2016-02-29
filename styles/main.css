@@ -1,0 +1,10 @@
+body {
+    background-color: #ff760d;
+    font-family: helvetica;
+    font-size: 14;
+    color: #ffffff;
+}
+
+.code-snippet {
+    height: 250px;
+}
