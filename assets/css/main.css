@@ -3881,6 +3881,24 @@
 		}
 
 /* Intro */
+	.tcplogo {
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		margin-left: 1em;
+	}
+
+	#intro h1 {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+
+	.introheading {
+		vertical-align: middle;
+		margin-bottom: 2em;
+	    display:flex;
+    	align-items: center;
+	}
 
 	#intro {
 		background-attachment: fixed;
