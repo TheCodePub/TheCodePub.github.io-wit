@@ -1,0 +1,112 @@
+/*   Example taken from http://bennettfeely.com/csscreatures/ made by someone */
+
+.caption {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+.creature-red {
+  display: inline-block;
+}
+
+.creature-red figure {
+  background-color: red;
+  display: block;
+  width: 200px;
+  height: 200px;
+  padding: 40px;
+  box-shadow: inset -10px -30px rgba(0, 0, 0, .06);
+  border-radius: 50%;
+  -webkit-animation: bobble 5s ease-in-out infinite;
+  animation: bobble 5s ease-in-out infinite;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-transition: padding .3s, bottom .3s;
+  transition: padding .3s, bottom .3s;
+  text-align: center;
+
+}
+
+
+.creature-red .eye {
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  margin: 0 5px 5px;
+  background: rgba(0, 0, 0, .9);
+  border-radius: 10px;
+  border-radius: 50%;
+  -webkit-animation: blink 4s ease-in-out infinite;
+  animation: blink 4s ease-in-out infinite;
+}
+
+
+.creature-red .mouth {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin: 5px auto 0;
+  background: rgba(0, 0, 0, .9);
+  border-radius: 10px 10px 100px 100px;
+  border-radius: 10px 10px 50% 50%;
+  -webkit-transition: border-radius .5s, height .5s cubic-bezier(.15, .60, .30, 1.9);
+  transition: border-radius .5s, height .5s cubic-bezier(.15, .60, .30, 1.9);
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+}
+
+.creature-red .tooth:after {
+  display: inline-block;
+  content: "";
+  margin: 0 2px;
+  margin-right: 17px;
+  width: 15px;
+  height: 15px;
+  background: #eee;
+
+}
+
+
+.creature-red .hyper {
+  -webkit-animation: hyper 2s infinite;
+  animation: hyper 2s infinite;
+}
+
+@-webkit-keyframes hyper {
+  25% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  15%,
+  50% {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+  }
+  75% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes hyper {
+  25% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  15%,
+  50% {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+  }
+  75% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.creature-red .hyper .mouth {
+  height: 80px;
+  border-radius: 20px 20px 50% 50%;
+}
