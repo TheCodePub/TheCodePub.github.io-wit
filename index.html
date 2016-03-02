@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/creature-red.css"/>
         <link rel="stylesheet" href="assets/css/spinner2.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/solarsystem.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -153,8 +154,40 @@
 					<section id="experienced" class="wrapper style1 fullscreen fade-up">
                         <div class="inner">
                             <h1>Experienced level exercises</h1>
-                            <p>Phasellus convallis elit id ullamcorper pulvinar.<br />
-                            Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus. </p>
+                            <h2>Solar System</h2>
+                            <p>Animation properties currently only work on -webkit browsers (Chrome or Safari). </p>
+
+                            <div class="solarsystem-container">
+
+                                <!-- The planets -->
+                                <ul class="solarsystem">
+                                  <li class="sun"><a href="#sun"></a></li>
+                                  <li class="mercury"><a href="#mercury"></a></li>
+                                  <li class="venus"><a href="#venus"></a></li>
+                                  <li class="earth"><a href="#earth"><span><span class="moon"></span></span></a></li>
+                                  <li class="mars"><a href="#mars"></a></li>
+                                  <li class="jupiter"><a href="#jupiter"></a></li>
+                                  <li class="saturn"><a href="#saturn"><span class="ring"></span></a></li>
+                                  <li class="uranus"><a href="#uranus"></a></li>
+                                  <li class="neptune"><a href="#neptune"></a></li>
+                                  <li class="pluto"><a href="#pluto"></a></li>
+                                </ul>
+
+                                <!-- The planet list -->
+                                <ul id="descriptions">
+                                  <li><h2 id="sun">Sun</h2></li>
+                                  <li><h2 id="mercury">Mercury</h2></li>
+                                  <li><h2 id="venus">Venus</h2></li>
+                                  <li><h2 id="earth">Earth</h2></li>
+                                  <li><h2 id="mars">Mars</h2></li>
+                                  <li><h2 id="jupiter">Jupiter</h2></li>
+                                  <li><h2 id="saturn">Saturn</h2></li>
+                                  <li><h2 id="uranus">Uranus</h2></li>
+                                  <li><h2 id="neptune">Neptune</h2></li>
+                                  <li><h2 id="pluto">Pluto</h2></li>
+                                </ul>
+                            </div>
+
                             <ul class="actions">
                                 <li><a href="#intro" class="button scrolly">Return to top</a></li>
                             </ul>
@@ -180,6 +213,21 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+        <!--- Scripts for solar system hover -->
+        <script src="http://www.google.com/jsapi"></script>
+        <script>
+          // Load jQuery
+          google.load("jquery", "1");
+          </script>
+          <script type="text/javascript" charset="utf-8">
+          $(function(){
+            $('ul#descriptions h2').hover(function(){
+              $('ul.solarsystem li.' + $(this).attr('id') ).toggleClass('active');
+
+            })
+          });
+        </script>
 
 	</body>
 </html>
