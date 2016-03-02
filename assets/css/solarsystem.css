@@ -11,6 +11,14 @@ Originally by Alex Giron
 
   - - - - - - - - - - - - - - - - - */
 
+.solarsystem-section h2 {
+  margin: 0;
+}
+
+.solarsystem-section p {
+  margin-bottom: 20px;
+}
+
 div.solarsystem-container {
   width: 960px;
   margin: 0 auto;
