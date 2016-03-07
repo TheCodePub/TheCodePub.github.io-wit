@@ -1,0 +1,84 @@
+/*
+ * 1) Modify the duration and delay.
+ * 2) Try to combine the square-to-circle and scale animations (one & three).
+ * 3) Why can't you combine animation rotate and scale?
+ */
+
+.shape {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 50px;
+}
+
+.one {
+  background-color: #ffaabb;
+  -webkit-animation: square-to-circle 2s 0s infinite alternate;
+  animation: square-to-circle 2s 0s infinite alternate;
+}
+
+.two {
+  background-color: #aabbff;
+  -webkit-animation: rotate 2s 2s infinite alternate;
+  animation: rotate 2s 2s infinite alternate;
+}
+
+.three {
+  background-color: #00ddcc;
+  -webkit-animation: scale 1s 1s infinite alternate;
+  animation: scale 1s 1s infinite alternate;
+}
+
+.four {
+  background-color: #c7e1ba;
+  -webkit-animation: move 2s 2s infinite alternate;
+  animation: move 2s 2s infinite alternate;
+}
+
+@-webkit-keyframes square-to-circle {
+  100% {
+    -webkit-border-radius: 100px;
+  }
+}
+
+@keyframes square-to-circle {
+  100% {
+    border-radius: 100px;
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes scale {
+  100% {
+    -webkit-transform: scale(1.5);
+  }
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes move {
+  100% {
+    -webkit-transform: translate(200px, 0);
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate(200px, 0);
+  }
+}
