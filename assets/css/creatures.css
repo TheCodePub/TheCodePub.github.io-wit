@@ -1,4 +1,4 @@
-/*   Example taken from http://bennettfeely.com/csscreatures/ made by someone */
+/*   (c) http://bennettfeely.com/csscreatures/ made by someone */
 .caption {
   margin-bottom: 2em;
   text-align: center;
@@ -17,12 +17,6 @@
   padding: 40px;
   box-shadow: inset -10px -30px rgba(0, 0, 0, .06);
   border-radius: 50%;
-  /*-webkit-animation: bobble 5s ease-in-out infinite;
-  animation: bobble 5s ease-in-out infinite;*/
-  /*-webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-  -webkit-transition: padding .3s, bottom .3s;
-  transition: padding .3s, bottom .3s;*/
   text-align: center;
 }
 
@@ -53,7 +47,7 @@
 
 /* Creature-red ***************************************/
 .creature-red figure {
-  background-color: red;
+  background-color: #8DC75D;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
   -webkit-transition: padding .3s, bottom .3s;
@@ -84,7 +78,7 @@
 }
 /* Creature-red ***************************************/
 .creature-green figure {
-  background: green;
+  background: none;
 }
 
 /* Animations *****************************************/
@@ -130,15 +124,120 @@
 /* Gladly rotate */
 
 .creature .gladly-rotate {
-  -webkit-animation-name: rotateThis;
-  -webkit-animation-duration:2s;
+  animation: gladlyRotate ease-in-out 8s;
+  animation-iteration-count: infinite;
+
+  -webkit-animation: gladlyRotate ease-in-out 8s;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function:ease-in-out;
-  -webkit-transform: translateZ(0);
-  -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes rotateThis {
-  from { -webkit-transform:rotate(0deg); }
-  to { -webkit-transform:rotate(360deg); }
+@-webkit-keyframes gladlyRotate {
+    0% { -webkit-transform:  -webkit-translate(0px,0px)  -webkit-rotate(0deg); }
+    30% { -webkit-transform:  -webkit-translate(400px,0px)  -webkit-rotate(360deg); }
+    35% { -webkit-transform:  -webkit-translate(400px, -50px); }
+    45% { -webkit-transform:  -webkit-translate(400px, 0px); background-color : yellow; }
+    75% { -webkit-transform:  -webkit-translate(400px, 0px) -webkit-rotate(360deg); }
+    85% { -webkit-transform:  -webkit-translate(0px,0px)  -webkit-rotate(0deg); }
+}
+
+@keyframes gladlyRotate {
+    0% { transform:  translate(0px,0px)  rotate(0deg); }
+    30% { transform: translate(400px,0px)  rotate(360deg); }
+    35% { transform: translate(400px, -50px); }
+    45% { transform: translate(400px, 0px); background-color : yellow; }
+    75% { transform: translate(400px, 0px) rotate(360deg); }
+    85% { transform: translate(0px,0px)  rotate(0deg); }
+}
+
+
+
+/***** bouncer *********/
+/* (c) http://www.the-art-of-web.com/css/bouncing-ball-animation/  */
+
+@-webkit-keyframes travel {
+  from { left: 0;     }
+  to   { left: 640px; }
+}
+@keyframes travel {
+  from { left: 0;     }
+  to   { left: 640px; }
+}
+
+@-webkit-keyframes bounce {
+  from, to  {
+    bottom: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@keyframes bounce {
+  from, to  {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    animation-timing-function: ease-in;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {                                     }
+  to   { -webkit-transform: rotateZ(360deg); }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.creature-bouncer figure{
+  background: #B1E29A;
+}
+
+#stage {
+  position: relative;
+  margin: 1em auto;
+  width: 660px;
+  height: 240px;
+}
+
+#traveler {
+  position: absolute;
+  width: 200px;
+  height: 240px;
+
+  -webkit-animation-name: travel;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-duration: 4.8s;
+
+  animation-name: travel;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 4.8s;
+}
+
+#bouncer {
+  position: absolute;
+  -webkit-animation-name: bounce, spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 4.2s;
+
+  animation-name: bounce, spin;
+  animation-iteration-count: infinite;
+  animation-duration: 4.2s;
 }
