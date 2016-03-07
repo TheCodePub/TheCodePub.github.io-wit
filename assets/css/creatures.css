@@ -186,7 +186,7 @@
     -webkit-animation-timing-function: ease-out;
   }
   50% {
-    bottom: 220px;
+    bottom: 120px;
     -webkit-animation-timing-function: ease-in;
   }
 }
@@ -197,7 +197,7 @@
     animation-timing-function: ease-out;
   }
   50% {
-    bottom: 220px;
+    bottom: 120px;
     animation-timing-function: ease-in;
   }
 }
