@@ -1,0 +1,40 @@
+.blinking-star {
+	color: #fff;
+	font-size: 100px;
+	margin-right: 20px;
+}
+
+.blinking-star-1,
+.blinking-star-2,
+.blinking-star-3,
+.blinking-star-4 {
+  -webkit-animation: blink-animation 1s infinite; /* Safari 4+ */
+  -moz-animation:    blink-animation 1s infinite; /* Fx 5+ */
+  -o-animation:      blink-animation 1s infinite; /* Opera 12+ */
+  animation:         blink-animation 1s infinite; /* IE 10+, Fx 29+ */
+}
+
+.blinking-star-4 {
+	animation-delay: 0.5s;
+}
+
+@-webkit-keyframes blink-animation {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes blink-animation {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes blink-animation {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes blink-animation {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
