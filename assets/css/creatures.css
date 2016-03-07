@@ -1,7 +1,10 @@
 /*   (c) http://bennettfeely.com/csscreatures/ made by someone */
 .caption {
-  margin-bottom: 2em;
-  text-align: center;
+  margin-top: 20px;
+}
+
+.caption-bottom-padding {
+  margin-bottom: 20px;
 }
 
 /* Creature *************************************/
@@ -45,24 +48,24 @@
   transform-origin: center top;
 }
 
-/* Creature-red ***************************************/
-.creature-red figure {
+/* Creature-one ***************************************/
+.creature-one figure {
   background-color: #8DC75D;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
   -webkit-transition: padding .3s, bottom .3s;
   transition: padding .3s, bottom .3s;
 }
-.creature.creature-red .eye {
+.creature-one .eye {
  -webkit-animation: blink 4s ease-in-out infinite;
   animation: blink 4s ease-in-out infinite;
 }
-.creature-red .mouth {
+.creature-one .mouth {
   -webkit-transition: border-radius .5s, height .5s cubic-bezier(.15, .60, .30, 1.9);
   transition: border-radius .5s, height .5s cubic-bezier(.15, .60, .30, 1.9);
 }
 
-.creature-red .tooth:after {
+.creature-one .tooth:after {
   display: inline-block;
   content: "";
   margin: 0 2px;
@@ -72,16 +75,30 @@
   background: #eee;
 }
 
-.creature-red .hyper .mouth {
+.creature-one .hyper .mouth {
   height: 80px;
   border-radius: 20px 20px 50% 50%;
 }
-/* Creature-red ***************************************/
-.creature-green figure {
-  background: none;
+
+
+/* Creature-three ***************************************/
+.creature-three figure{
+  background: #B1E29A;
 }
 
 /* Animations *****************************************/
+
+/* Blink */
+@-webkit-keyframes blink {
+  90% { -webkit-transform: none; transform: none; }
+  95% { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
+}
+
+@keyframes blink {
+  90% { -webkit-transform: none; transform: none; }
+  95% { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
+}
+
 
 /* Hyper */
 .creature .hyper {
@@ -121,8 +138,8 @@
   }
 }
 
-/* Gladly rotate */
 
+/* Gladly rotate */
 .creature .gladly-rotate {
   animation: gladlyRotate ease-in-out 8s;
   animation-iteration-count: infinite;
@@ -151,7 +168,7 @@
 
 
 
-/***** bouncer *********/
+/* Bouncer */
 /* (c) http://www.the-art-of-web.com/css/bouncing-ball-animation/  */
 
 @-webkit-keyframes travel {
@@ -199,11 +216,6 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-}
-
-
-.creature-bouncer figure{
-  background: #B1E29A;
 }
 
 #stage {
