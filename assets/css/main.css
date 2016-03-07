@@ -3885,6 +3885,10 @@
 		}
 
 /* Intro */
+	.intrologo {
+		border: none;
+	}
+
 	.tcplogo {
 		width: 100px;
 		height: 100px;
