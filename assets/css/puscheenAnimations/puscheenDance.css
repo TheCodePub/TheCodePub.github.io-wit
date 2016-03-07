@@ -1,10 +1,14 @@
 
-.puscheens {
+.puscheenOuter {
         			width: 100%;
         			height: 300px;
         			margin: 0;
         			padding: 0;
               position: relative;
+}
+.puscheen {
+
+              position: absolute;
 }
 .left {
       position: absolute;
@@ -26,31 +30,73 @@
 }
 
 @keyframes catanimation {
+
   0% {
-    margin-left: 0;
-    margin-top: 0;
+    margin-left: 0px;
+    margin-top: 20px;
+    opacity: 1
+
   }
-  25% {
-    margin-left: -5px;
-    margin-top: 5px;
+  10% {
+    margin-left: 100px;
+    margin-top: -30px;
+    opacity: 0
+  }
+  20% {
+    margin-left: 200px;
+    margin-top: 30px;
+    opacity: 1
+  }
+  30% {
+    margin-left: 300px;
+    margin-top: -30px;
+    opacity: 0
+  }
+    40% {
+    margin-left: 400px;
+    margin-top: 30px;
+    opacity: 1
   }
   50% {
-    margin-left: 25px;
-    margin-top: 0px;
+    margin-left: 500px;
+    margin-top: -30px;
+    opacity: 0
   }
-  75% {
-    margin-left: 0px;
-    margin-top: -5px;
+  60% {
+    margin-left: 400px;
+    margin-top: 30px;
+    opacity: 1
+  }
+  70% {
+    margin-left: 300px;
+    margin-top: -30px;
+    opacity: 0
+
+  }
+  80% {
+    margin-left: 200px;
+    margin-top: 30px;
+    opacity: 1
+  }
+  90% {
+    margin-left: 100px;
+    margin-top: -30px;
+    opacity: 0
+
   }
   100% {
-    margin-left: -0;
-    margin-top: 0;
+    margin-left: 0px;
+    margin-top: 30px;
+    opacity: 1
   }
 }
 
-.puscheenDance:hover {
+
+
+
+.puscheenDance {
   animation-name: catanimation;
-  animation-duration: 1s;
+  animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
