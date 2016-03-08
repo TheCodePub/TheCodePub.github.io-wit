@@ -2,6 +2,7 @@
  * 1) Modify the duration and delay.
  * 2) Try to combine the simple-square-to-circle and simple-scale animations (one & three).
  * 3) Why can't you combine animation simple-rotate and simple-scale?
+ * 4) Add a new shape and animate its color
  */
 
 .simple-shape {
